@@ -17,28 +17,83 @@ class instagramApp extends StatelessWidget {
             Icon(Icons.favorite),
           ],
         ),
-        body: Container(
-         decoration: BoxDecoration(
-          gradient:LinearGradient(
-          colors: [Color(0xFF405DE6), Color.fromARGB(255, 221, 23, 23), Color.fromARGB(255, 248, 200, 96)],
-          begin: Alignment.topLeft,
-          end: Alignment.bottomRight,
-         ),
-         ),
-          width: 420,
-          height: 420,
-          child: Center(
-            child: FaIcon(
-              FontAwesomeIcons.instagram,
-              size: 100,
-              color: Colors.white,
-            ),
-          ),
-      
-        ),
+        body:
         
-      ),
+        
       
+         Column(
+          
+
+          mainAxisAlignment: MainAxisAlignment.center,
+          children: [
+           Stack(
+              alignment: Alignment.topLeft,
+              children:[
+               Container(
+              child: Image.asset('assets/user.png'),
+              width: 50,
+              height: 50,
+               ),
+               Text('dada'),
+              ],
+             ),
+              
+            Container(
+              decoration: BoxDecoration(
+                gradient: LinearGradient(
+                  colors: [
+                    Color(0xFF405DE6),
+                    Color.fromARGB(255, 221, 23, 23),
+                    Color.fromARGB(255, 248, 200, 96)
+                  ],
+                  begin: Alignment.topLeft,
+                  end: Alignment.bottomRight,
+                ),
+              ),
+              width: 420,
+              height: 420,
+              child: Center(
+                child: FaIcon(
+                  FontAwesomeIcons.instagram,
+                  size: 150,
+                  color: Colors.white,
+                ),
+              ),
+            ),
+            SizedBox(height: 10),
+            SizedBox(
+              child: Row(
+                children: [
+                  SizedBox(width: 18),
+                  Icon(
+                    Icons.favorite,
+                    size: 40,
+                    color: Color.fromARGB(255, 0, 0, 0),
+                  ),
+                  SizedBox(width: 18),
+                  Icon(
+                    Icons.comment,
+                    size: 40,
+                    color: Color.fromARGB(255, 0, 0, 0),
+                  ),
+                  SizedBox(width: 18),
+                  Icon(
+                    Icons.send,
+                    size: 40,
+                    color: Color.fromARGB(255, 0, 0, 0),
+                  ),
+                  SizedBox(width: 180),
+                  Icon(
+                    Icons.save,
+                    size: 40,
+                    color: Color.fromARGB(255, 0, 0, 0),
+                  ),
+                ],
+              ),
+            ),
+          ],
+        ),
+      ),
     );
   }
 }
